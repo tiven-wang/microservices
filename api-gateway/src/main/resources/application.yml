@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: zuul
+
+server:
+  port: 8080
+
+zuul:
+  routes:
+    books:
+      url: http://localhost:8090
+    inventory:
+      url: http://localhost:8091
+
+ribbon:
+  eureka:
+    enabled: false
+
+management:
+  security:
+    enabled: false
